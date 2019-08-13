@@ -1,6 +1,6 @@
 package com.matcher.top.it.service.impl;
 
-import com.matcher.top.it.dao.DeptDao;
+import com.matcher.top.it.dao.DeptDao8002;
 import com.matcher.top.it.entity.Dept;
 import com.matcher.top.it.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,20 +20,20 @@ import java.util.List;
 public class DeptServiceImpl implements DeptService {
 
     @Autowired
-    private DeptDao deptDao;
+    private DeptDao8002 deptDao8002;
     @Override
     public Dept get(Long id) {
-        return deptDao.findById(id);
+        return deptDao8002.findById(id);
     }
 
     @Override
     public List<Dept> list() {
-        return deptDao.findAll();
+        return deptDao8002.findAll();
     }
 
     @Override
     @Transactional
     public boolean add(Dept dept) {
-        return deptDao.addDept(dept);
+        return deptDao8002.addDept(dept);
     }
 }

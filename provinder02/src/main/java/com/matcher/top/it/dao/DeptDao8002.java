@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Mapper
 @Component
-public interface DeptDao {
+public interface DeptDao8002 {
 
     public Dept findById(Long id);
 
