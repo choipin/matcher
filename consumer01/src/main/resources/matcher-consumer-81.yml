@@ -1,0 +1,37 @@
+server:
+  port: 84
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: consumer
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    instance-id: consumer-84
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8765.com:8765/eureka/,http://eureka8766.com:8766/eureka/
+---
+server:
+  port: 81
+
+spring:
+  profiles:
+    active: prod
+  application:
+    name: consumer
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    instance-id: consumer-81
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/,http://eureka8763.com:8763/eureka/

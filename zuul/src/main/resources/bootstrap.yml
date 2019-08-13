@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: matcher-zuul-9527
+      label: master
+      profile: prod
+      uri: http://localhost:8888

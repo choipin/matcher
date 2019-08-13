@@ -1,0 +1,16 @@
+server:
+  port: 3344
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:choipin/matcher.git
+  application:
+    name: matcher

@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: matcher-consumer-82
+      label: master
+      profile: prod
+      uri: http://localhost:8888

@@ -1,0 +1,62 @@
+server:
+  port: 8004
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: provinder
+  datasource:
+    username: root
+    password: root
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/dev01
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mybatis/*xml
+  type-aliases-package: com.matcher.top.it.entity
+
+eureka:
+  instance:
+    instance-id: provinder-8004
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8765.com:8765/eureka/,http://eureka8766.com:8766/eureka/
+info:
+  app.name: mathcer-top-it
+  company.name: www.mathcer.top.it.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 8001
+
+spring:
+  profiles:
+    active: prod
+  application:
+    name: provinder
+  datasource:
+    username: root
+    password: root
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/prod01
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mybatis/*xml
+  type-aliases-package: com.matcher.top.it.entity
+eureka:
+  instance:
+    instance-id: provinder-8001
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/,http://eureka8763.com:8763/eureka/
+info:
+  app.name: mathcer-top-it
+  company.name: www.mathcer.top.it.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

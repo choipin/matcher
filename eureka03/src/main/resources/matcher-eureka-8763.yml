@@ -1,0 +1,29 @@
+server:
+  port: 8766
+spring:
+  profiles:
+    active: dev
+eureka:
+  instance:
+    hostname: eureka8766.com
+    prefer-ip-address: true
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8765.com:8765/eureka/
+---
+server:
+  port: 8763
+spring:
+  profiles:
+    active: prod
+eureka:
+  instance:
+    hostname: eureka8763.com
+    prefer-ip-address: true
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/

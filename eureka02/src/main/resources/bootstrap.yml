@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: matcher-eureka-8762
+      label: master
+      profile: prod
+      uri: http://localhost:8888

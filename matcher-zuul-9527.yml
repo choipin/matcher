@@ -1,0 +1,67 @@
+server:
+  port: 9528
+spring:
+  profiles:
+    active: dev
+  application:
+    name: zuul
+zuul:
+  prefix: matcher
+  routes:
+    provinder.serviceId: provinder
+    provinder.path: /myprovinder/**
+    consumer.serviceId: consumer
+    consumer.path: /myconsumer/**
+hystrix:
+  metrics:
+    enabled: true
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    instance-id: zuul-9528
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8764.com:8764/eureka/,http://eureka8764.com:8764/eureka/
+
+info:
+  app.name: mathcer-top-it
+  company.name: www.matcher.top.it.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 9527
+spring:
+  profiles:
+    active: prod
+  application:
+    name: zuul
+zuul:
+  prefix: matcher
+  routes:
+    provinder.serviceId: provinder
+    provinder.path: /myprovinder/**
+    consumer.serviceId: consumer
+    consumer.path: /myconsumer/**
+hystrix:
+  metrics:
+    enabled: true
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  instance:
+    instance-id: zuul-9527
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8762.com:8762/eureka/,http://eureka8763.com:8763/eureka/
+
+info:
+  app.name: mathcer-top-it
+  company.name: www.matcher.top.it.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$

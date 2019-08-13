@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Don't forget to set system property
+-DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+     to make all loggers asynchronous. -->
+
+<!-- status="OFF"，可以去掉，它的含义为是否记录log4j2本身的event信息，默认是OFF -->
+<configuration status="OFF">
+    <!-- 定义下面的引用名 -->
+    <Properties>
+        <!-- <property name="basePath">系统日志位置</property> -->
+       <!-- <property name="basePath">/imi/askbob/artifact/log</property>-->
+        <!-- 暂时业务都输出到同一个日志文件 -->
+     <!--   <property name="askbob-msg">${basePath}/specialist</property>-->
+    </Properties>
+    <!--先定义所有的appender -->
+    <appenders>
+        <!--输出控制台的配置 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!--输出日志的格式 -->
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %X{X-B3-TraceId} %X{X-B3-SpanId} %X{X-B3-ParentSpanId} %-5level %logger{36} %L %M - %msg%n"/>
+        </Console>
+
+        <!--打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
+        <!-- 按月生成归档日志，可以使用 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log" -->
+        <RollingRandomAccessFile name="rollingfile_askbob-msg" immediateFlush="true"
+                                 filename="${askbob-msg}.log" filePattern="${askbob-msg}-%d{yyyy-MM-dd}-%i.log"
+                                 append="true">
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout>
+                <Pattern>[%d{yyyy-MM-dd HH:mm:ss,SSS}] [%t] [%X{X-B3-TraceId}] [%X{X-B3-SpanId}] [%X{X-B3-ParentSpanId}] [%-5level] [%class{36}] [%L] [%M] [%msg%xEx]%n
+                </Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="40"/>
+        </RollingRandomAccessFile>
+    </appenders>
+    <!--然后定义logger，只有定义了logger并引入的appender，appender才会生效 -->
+    <loggers>
+        <logger level="info" name="org" additivity="false">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="rollingfile_askbob-msg"/>
+        </logger>
+        <logger level="info" name="com.netflix" additivity="false">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="rollingfile_askbob-msg"/>
+        </logger>
+        <logger level="info" name="com.ulisesbocchio" additivity="false">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="rollingfile_askbob-msg"/>
+        </logger>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="rollingfile_askbob-msg"/>
+        </root>
+    </loggers>
+</configuration>

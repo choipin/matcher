@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: matcher-provinder-8003
+      profile: prod
+      label: master
+      uri: http://localhost:8888
