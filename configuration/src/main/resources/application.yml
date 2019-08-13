@@ -11,6 +11,6 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:choipin/matcher.git
+          uri: https://github.com/choipin/matcher.git
   application:
     name: matcher
