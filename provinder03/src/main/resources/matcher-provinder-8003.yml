@@ -9,7 +9,7 @@ spring:
     username: root
     password: root
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://locahost:3306/dev03
+    url: jdbc:mysql://localhost:3306/dev03
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
@@ -41,7 +41,7 @@ spring:
     username: root
     password: root
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://locahost:3306/prod03
+    url: jdbc:mysql://localhost:3306/prod03
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
