@@ -11,6 +11,9 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://locahost:3306/dev03
     type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  type-aliases-package: com.matcher.top.it.entity
 hystrix:
   feign:
     enabled: true
@@ -40,6 +43,9 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://locahost:3306/prod03
     type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  type-aliases-package: com.matcher.top.it.entity
 hystrix:
   feign:
     enabled: true

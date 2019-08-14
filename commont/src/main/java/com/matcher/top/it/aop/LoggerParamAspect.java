@@ -3,6 +3,7 @@ package com.matcher.top.it.aop;
 import com.matcher.top.it.annotation.LoggerParam;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
@@ -23,6 +24,7 @@ import java.util.Optional;
 @Slf4j
 public class LoggerParamAspect {
 
+    @Around("execution(* com.matcher.top.it.*.*.*(..))")
     public Object loggerParamHandler(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long start = System.currentTimeMillis();
         String name = proceedingJoinPoint.getSignature().getName();
@@ -38,6 +40,7 @@ public class LoggerParamAspect {
         if (!ObjectUtils.isEmpty(methodAnnotation)|| !ObjectUtils.isEmpty(classAnnotation)){
             log.info("[{AOP }]"+name+","+ Arrays.asList(args));
             log.info("[{AOP }]"+result+","+ result);
+            log.info("[{AOP}]: "+(end - start)+"second");
             log.info("[{AOP }]"+(end-start)+"second");
         }
         return result;

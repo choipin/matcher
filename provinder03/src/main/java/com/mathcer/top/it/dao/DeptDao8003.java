@@ -2,7 +2,6 @@ package com.mathcer.top.it.dao;
 
 import com.matcher.top.it.entity.Dept;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.aop.support.DelegatePerTargetObjectIntroductionInterceptor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
