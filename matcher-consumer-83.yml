@@ -21,7 +21,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8764.com:8764/eureka/,http://eureka8764.com:8764/eureka/
+      defaultZone: http://eureka8764.com:8764/eureka/,http://eureka8765.com:8765/eureka/,http://eureka8766.com:8766/eureka/
 
 info:
   app.name: mathcer-top-it

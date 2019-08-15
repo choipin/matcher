@@ -12,6 +12,9 @@ spring:
 feign:
   hystrix:
     enabled: true
+hystrix:
+  metrics:
+    enabled: true
 eureka:
   instance:
     instance-id: consumer-84
@@ -33,6 +36,9 @@ spring:
       uri: mongodb://localhost:27017/user
 feign:
   hystrix:
+    enabled: true
+hystrix:
+  metrics:
     enabled: true
 eureka:
   instance:
