@@ -14,7 +14,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis:
-  mapper-locations: classpath:mybatis/*xml
+  mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity
 
 eureka:
@@ -46,7 +46,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
 
 mybatis:
-  mapper-locations: classpath:mybatis/*xml
+  mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity
 eureka:
   instance:
