@@ -5,3 +5,4 @@ spring:
       label: master
       profile: prod
       uri: http://localhost:8888
+

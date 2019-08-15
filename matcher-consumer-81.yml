@@ -6,6 +6,9 @@ spring:
     active: dev
   application:
     name: consumer
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/user
 feign:
   hystrix:
     enabled: true
@@ -25,6 +28,9 @@ spring:
     active: prod
   application:
     name: consumer
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/user
 feign:
   hystrix:
     enabled: true
