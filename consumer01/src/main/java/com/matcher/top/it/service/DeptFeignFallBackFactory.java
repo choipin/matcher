@@ -27,11 +27,11 @@ public class DeptFeignFallBackFactory implements FallbackFactory<DeptService> {
             @Override
             public List<Dept> consumerList() {
                 return Arrays.asList(
-                                new Dept().setDeptno(1L).setDName("01_dname_01").setDbSource("01_dbSource_01").setDName("01_description_01"),
-                                new Dept().setDeptno(2L).setDName("01_dname_02").setDbSource("01_dbSource_02").setDName("01_description_02"),
-                                new Dept().setDeptno(3L).setDName("01_dname_03").setDbSource("01_dbSource_03").setDName("01_description_03"),
-                                new Dept().setDeptno(4L).setDName("01_dname_04").setDbSource("01_dbSource_04").setDName("01_description_04"),
-                                new Dept().setDeptno(5L).setDName("01_dname_05").setDbSource("01_dbSource_05").setDName("01_description_05")
+                                new Dept().setDeptno(1L).setDName("fallback_000-_0").setDbSource("fallback_000-_0").setDName("fallback_000-_0"),
+                                new Dept().setDeptno(2L).setDName("fallback_000-_0").setDbSource("fallback_000-_0").setDName("fallback_000-_0"),
+                                new Dept().setDeptno(3L).setDName("fallback_000-_0").setDbSource("fallback_000-_0").setDName("fallback_000-_0"),
+                                new Dept().setDeptno(4L).setDName("fallback_000-_0").setDbSource("fallback_000-_0").setDName("fallback_000-_0"),
+                                new Dept().setDeptno(5L).setDName("fallback_000-_0").setDbSource("fallback_000-_0").setDName("fallback_000-_0")
                                 );
             }
 

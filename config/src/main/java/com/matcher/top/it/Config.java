@@ -1,4 +1,4 @@
-package com.mathcer.top.it;
+package com.matcher.top.it;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

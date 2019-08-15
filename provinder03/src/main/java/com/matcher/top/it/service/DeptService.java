@@ -1,4 +1,4 @@
-package com.mathcer.top.it.service;
+package com.matcher.top.it.service;
 
 import com.matcher.top.it.entity.Dept;
 

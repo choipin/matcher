@@ -21,17 +21,17 @@ public class DeptFeignFallBackFacotry implements FallbackFactory<DeptService> {
         return new DeptService() {
             @Override
             public Dept get(Long id) {
-                return new Dept().setDeptno(id).setDName("03_dname_01").setDbSource("03_dbSource_01").setDName("03_description_01");
+                return new Dept().setDeptno(id).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03");
             }
 
             @Override
             public List<Dept> list() {
                 return Arrays.asList(
-                        new Dept().setDeptno(1L).setDName("03_dname_01").setDbSource("03_dbSource_01").setDName("03_description_01"),
-                        new Dept().setDeptno(2L).setDName("03_dname_02").setDbSource("03_dbSource_02").setDName("03_description_02"),
-                        new Dept().setDeptno(3L).setDName("03_dname_03").setDbSource("03_dbSource_03").setDName("03_description_03"),
-                        new Dept().setDeptno(4L).setDName("03_dname_04").setDbSource("03_dbSource_04").setDName("03_description_04"),
-                        new Dept().setDeptno(5L).setDName("03_dname_05").setDbSource("03_dbSource_05").setDName("03_description_05")
+                        new Dept().setDeptno(1L).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03"),
+                        new Dept().setDeptno(2L).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03"),
+                        new Dept().setDeptno(3L).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03"),
+                        new Dept().setDeptno(4L).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03"),
+                        new Dept().setDeptno(5L).setDName("fallback____-_03").setDbSource("fallback____-_03").setDName("fallback____-_03")
                 );
             }
 

@@ -1,8 +1,8 @@
-package com.mathcer.top.it.service.impl;
+package com.matcher.top.it.service.impl;
 
 import com.matcher.top.it.entity.Dept;
-import com.mathcer.top.it.dao.DeptDao8003;
-import com.mathcer.top.it.service.DeptService;
+import com.matcher.top.it.service.DeptService;
+import com.matcher.top.it.dao.DeptDao8003;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

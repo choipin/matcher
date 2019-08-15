@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.mathcer.top.it.dao.DeptDao8003">
+<mapper namespace="com.matcher.top.it.dao.DeptDao8003">
 
     <select id="get" resultType="com.matcher.top.it.entity.Dept" >
 		select deptno,dName,dbSource from dept where deptno=#{deptno};

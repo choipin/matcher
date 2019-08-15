@@ -1,8 +1,8 @@
-package com.mathcer.top.it.controller;
+package com.matcher.top.it.controller;
 
 import com.matcher.top.it.annotation.LoggerParam;
 import com.matcher.top.it.entity.Dept;
-import com.mathcer.top.it.service.DeptService;
+import com.matcher.top.it.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +19,7 @@ import java.util.List;
  */
 @RestController
 @LoggerParam
-public class DeptController {
+public class ProvinderController {
 
     @Autowired
     private DeptService deptService;

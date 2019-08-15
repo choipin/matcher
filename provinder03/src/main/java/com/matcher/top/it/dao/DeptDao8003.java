@@ -1,4 +1,4 @@
-package com.mathcer.top.it.dao;
+package com.matcher.top.it.dao;
 
 import com.matcher.top.it.entity.Dept;
 import org.apache.ibatis.annotations.Mapper;
