@@ -18,7 +18,7 @@ import java.util.List;
  * @version: 1.0
  */
 @Component
-@FeignClient(value = "provinder",fallbackFactory = DeptFeignFallBackFacotry.class)
+@FeignClient(value = "PROVINDER",fallbackFactory = DeptFeignFallBackFacotry.class)
 public interface DeptService {
 
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
