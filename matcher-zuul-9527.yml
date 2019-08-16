@@ -6,7 +6,7 @@ spring:
   application:
     name: zuul
 zuul:
-  prefix: matcher
+  prefix: /matcher
   routes:
     provinder.serviceId: provinder
     provinder.path: /myprovinder/**
@@ -43,7 +43,7 @@ spring:
   application:
     name: zuul
 zuul:
-  prefix: matcher
+  prefix: /matcher
   routes:
     provinder.serviceId: provinder
     provinder.path: /myprovinder/**
