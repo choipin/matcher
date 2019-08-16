@@ -19,6 +19,12 @@ mybatis:
 hystrix:
   feign:
     enabled: true
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
 eureka:
   instance:
     instance-id: provinder-8004
@@ -53,6 +59,12 @@ mybatis:
 hystrix:
   feign:
     enabled: true
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
 eureka:
   instance:
     instance-id: provinder-8001

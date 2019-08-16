@@ -11,7 +11,15 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/dev02
     type: com.alibaba.druid.pool.DruidDataSource
-
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+hystrix:
+  feign:
+    enabled: true
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity
@@ -43,7 +51,15 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/prod02
     type: com.alibaba.druid.pool.DruidDataSource
-
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
+hystrix:
+  feign:
+    enabled: true
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity

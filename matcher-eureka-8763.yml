@@ -3,6 +3,12 @@ server:
 spring:
   profiles:
     active: dev
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
 eureka:
   instance:
     hostname: eureka8766.com
@@ -18,6 +24,12 @@ server:
 spring:
   profiles:
     active: prod
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
 eureka:
   instance:
     hostname: eureka8763.com

@@ -5,13 +5,13 @@
 <mapper namespace="com.matcher.top.it.dao.DeptDao8003">
 
     <select id="get" resultType="com.matcher.top.it.entity.Dept" >
-		select deptno,dName,dbSource from dept where deptno=#{deptno};
+		select deptno,dName,dbSource,description from dept where deptno=#{deptno};
 	</select>
     <select id="list" resultType="com.matcher.top.it.entity.Dept">
-		select deptno,dName,dbSource from dept;
+		select deptno,dName,dbSource,description from dept;
 	</select>
     <insert id="add" parameterType="com.matcher.top.it.entity.Dept">
-		INSERT INTO dept(dName,dbSource) VALUES(#{dName},#{dbSource});
+		INSERT INTO dept(dName,dbSource,description) VALUES(#{dName},#{dbSource,#{description});
 	</insert>
 
 </mapper>
