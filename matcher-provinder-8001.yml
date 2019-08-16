@@ -16,7 +16,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity
-
+hystrix:
+  feign:
+    enabled: true
 eureka:
   instance:
     instance-id: provinder-8004
@@ -48,6 +50,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mybatis/*.xml
   type-aliases-package: com.matcher.top.it.entity
+hystrix:
+  feign:
+    enabled: true
 eureka:
   instance:
     instance-id: provinder-8001

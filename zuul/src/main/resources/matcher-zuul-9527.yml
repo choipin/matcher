@@ -18,6 +18,9 @@ hystrix:
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false
 eureka:
   instance:
     instance-id: zuul-9528
@@ -52,6 +55,9 @@ hystrix:
 feign:
   hystrix:
     enabled: true
+management:
+  security:
+    enabled: false
 eureka:
   instance:
     instance-id: zuul-9527

@@ -1,7 +1,9 @@
 package com.matcher.top.it.controller;
 
+import com.matcher.top.it.annotation.LoggerParam;
 import com.matcher.top.it.entity.Dept;
 import com.matcher.top.it.service.DeptService;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +19,7 @@ import java.util.List;
  * @version: 1.0
  */
 @RestController
+@LoggerParam
 public class ConsumerController {
     @Autowired
     private DeptService deptService;
