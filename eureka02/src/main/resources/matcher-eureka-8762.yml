@@ -38,4 +38,4 @@ eureka:
     fetch-registry: false
     register-with-eureka: false
     service-url:
-      defaultZone: http://eureka8761.com:8761/erueka/,http://eureka8763.com:8763/erueka/
+      defaultZone: http://eureka8761.com:8761/eureka/,http://eureka8763.com:8763/eureka/
